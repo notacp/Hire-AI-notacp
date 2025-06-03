@@ -2,6 +2,10 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
+echo "Build started from directory: $(pwd)"
+echo "Listing contents:"
+ls -la
+
 echo "Starting build process..."
 
 # Define the NLTK data path within the project structure
@@ -26,5 +30,4 @@ echo "Python dependencies installed."
 echo "Running Python script to download NLTK data (download_nltk_data.py)..."
 python download_nltk_data.py
 echo "NLTK data download script finished."
-
 echo "Build process complete."
